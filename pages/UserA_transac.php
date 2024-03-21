@@ -17,7 +17,7 @@ include'../includes/connection.php';
                 break;
               }
             ?>
-              <script type="text/javascript">window.location = "user.php";</script>
+              <script type="text/javascript">window.location = "UserA.php";</script>
           </div>
 
 <?php

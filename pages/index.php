@@ -32,10 +32,10 @@ if ($Aa=='User'){
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-0">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Customers</div>
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Users</div>
                       <div class="h6 mb-0 font-weight-bold text-gray-800">
                         <?php 
-                        $query = "SELECT COUNT(*) FROM customer";
+                        $query = "SELECT COUNT(*) FROM User";
                         $result = mysqli_query($db, $query) or die(mysqli_error($db));
                         while ($row = mysqli_fetch_array($result)) {
                             echo "$row[0]";

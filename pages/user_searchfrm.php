@@ -22,11 +22,11 @@ if ($Aa=='User'){
                          
            
 }   
-  $query = 'SELECT * FROM customer WHERE CUST_ID ='.$_GET['id'];
+  $query = 'SELECT * FROM User WHERE USER_ID ='.$_GET['id'];
   $result = mysqli_query($db, $query) or die(mysqli_error($db));
     while($row = mysqli_fetch_array($result))
     {   
-      $zz= $row['CUST_ID'];
+      $zz= $row['USER_ID'];
       $i= $row['FIRST_NAME'];
       $a=$row['LAST_NAME'];
       $b=$row['PHONE_NUMBER'];
@@ -36,9 +36,9 @@ if ($Aa=='User'){
             
             <center><div class="card shadow mb-4 col-xs-12 col-md-8 border-bottom-primary">
             <div class="card-header py-3">
-              <h4 class="m-2 font-weight-bold text-primary">Customer's Detail</h4>
+              <h4 class="m-2 font-weight-bold text-primary">User's Detail</h4>
             </div>
-            <a href="customer.php" type="button" class="btn btn-primary bg-gradient-primary btn-block"> <i class="fas fa-flip-horizontal fa-fw fa-share"></i> Back </a>
+            <a href="User1.php" type="button" class="btn btn-primary bg-gradient-primary btn-block"> <i class="fas fa-flip-horizontal fa-fw fa-share"></i> Back </a>
             <div class="card-body">
                 
 

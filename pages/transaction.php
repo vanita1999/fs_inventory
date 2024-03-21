@@ -31,7 +31,7 @@ include'../includes/sidebar.php';
                <thead>
                    <tr>
                      <th width="19%">Transaction Number</th>
-                     <th>Customer</th>
+                     <th>User</th>
                      <th width="13%"># of Items</th>
                      <th width="11%">Action</th>
                    </tr>
@@ -41,7 +41,7 @@ include'../includes/sidebar.php';
 <?php                  
     $query = 'SELECT *, FIRST_NAME, LAST_NAME
               FROM transaction T
-              JOIN customer C ON T.`CUST_ID`=C.`CUST_ID`
+              JOIN User C ON T.`User_ID`=C.`User_ID`
               ORDER BY TRANS_D_ID ASC';
         $result = mysqli_query($db, $query) or die (mysqli_error($db));
       

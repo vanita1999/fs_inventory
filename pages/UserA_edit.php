@@ -60,11 +60,11 @@ $opt .= "</select>";
   <center><div class="card shadow mb-4 col-xs-12 col-md-8 border-bottom-primary">
             <div class="card-header py-3">
               <h4 class="m-2 font-weight-bold text-primary">Edit User Account</h4>
-            </div><a  type="button" class="btn btn-primary bg-gradient-primary btn-block" href="user.php?"> <i class="fas fa-flip-horizontal fa-fw fa-share"></i> Back </a>
+            </div><a  type="button" class="btn btn-primary bg-gradient-primary btn-block" href="UserA.php?"> <i class="fas fa-flip-horizontal fa-fw fa-share"></i> Back </a>
             <div class="card-body">
       
 
-            <form role="form" method="post" action="us_edit1.php">
+            <form role="form" method="post" action="UserA_edit1.php">
               <input type="hidden" name="id" value="<?php echo $zz; ?>" />
 
               <div class="form-group row text-left text-warning">

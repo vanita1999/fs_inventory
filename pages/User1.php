@@ -26,7 +26,7 @@ if ($Aa=='User'){
             
             <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h4 class="m-2 font-weight-bold text-primary">Customer&nbsp;<a  href="#" data-toggle="modal" data-target="#customerModal" type="button" class="btn btn-primary bg-gradient-primary" style="border-radius: 0px;"><i class="fas fa-fw fa-plus"></i></a></h4>
+              <h4 class="m-2 font-weight-bold text-primary">User&nbsp;<a  href="#" data-toggle="modal" data-target="#UserModal" type="button" class="btn btn-primary bg-gradient-primary" style="border-radius: 0px;"><i class="fas fa-fw fa-plus"></i></a></h4>
             </div>
             
             <div class="card-body">
@@ -42,7 +42,7 @@ if ($Aa=='User'){
                   </thead>
                   <tbody>
                     <?php                  
-                      $query = 'SELECT * FROM customer';
+                      $query = 'SELECT * FROM User';
                       $result = mysqli_query($db, $query) or die (mysqli_error($db));
         
                       while ($row = mysqli_fetch_assoc($result)) {
@@ -51,13 +51,13 @@ if ($Aa=='User'){
                       echo '<td>'. $row['LAST_NAME'].'</td>';
                       echo '<td>'. $row['PHONE_NUMBER'].'</td>';
                       echo '<td align="right"> <div class="btn-group">
-                              <a type="button" class="btn btn-primary bg-gradient-primary" href="cust_searchfrm.php?action=edit & id='.$row['CUST_ID'] . '"><i class="fas fa-fw fa-list-alt"></i> Details</a>
+                              <a type="button" class="btn btn-primary bg-gradient-primary" href="user_searchfrm.php?action=edit & id='.$row['USER_ID'] . '"><i class="fas fa-fw fa-list-alt"></i> Details</a>
                             <div class="btn-group">
                               <a type="button" class="btn btn-primary bg-gradient-primary dropdown no-arrow" data-toggle="dropdown" style="color:white;">
                               ... <span class="caret"></span></a>
                             <ul class="dropdown-menu text-center" role="menu">
                                 <li>
-                                  <a type="button" class="btn btn-warning bg-gradient-warning btn-block" style="border-radius: 0px;" href="cust_edit.php?action=edit & id='.$row['CUST_ID']. '">
+                                  <a type="button" class="btn btn-warning bg-gradient-warning btn-block" style="border-radius: 0px;" href="user_edit.php?action=edit & id='.$row['USER_ID']. '">
                                     <i class="fas fa-fw fa-edit"></i> Edit
                                   </a>
                                 </li>

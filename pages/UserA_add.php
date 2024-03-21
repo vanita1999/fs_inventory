@@ -59,10 +59,10 @@ window.onload = function() {
             <div class="card-header py-3">
               <h4 class="m-2 font-weight-bold text-primary">Add User</h4>
             </div>
-            <a href="user.php?action=add" type="button" class="btn btn-primary bg-gradient-primary">Back</a>
+            <a href="UserA.php?action=add" type="button" class="btn btn-primary bg-gradient-primary">Back</a>
             <div class="card-body">
               <div class="table-responsive">
-                        <form role="form" method="post" action="us_transac.php?action=add">
+                        <form role="form" method="post" action="UserA_transac.php?action=add">
                             
                             <div class="form-group">
                               <input class="form-control" placeholder="First Name" name="firstname" required>

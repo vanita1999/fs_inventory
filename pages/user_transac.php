@@ -32,15 +32,15 @@ if ($Aa=='User'){
         
               switch($_GET['action']){
                 case 'add':     
-                    $query = "INSERT INTO customer
-                    (CUST_ID, FIRST_NAME, LAST_NAME, PHONE_NUMBER)
+                    $query = "INSERT INTO User
+                    (USER_ID, FIRST_NAME, LAST_NAME, PHONE_NUMBER)
                     VALUES (Null,'{$fname}','{$lname}','{$pn}')";
                     mysqli_query($db,$query)or die ('Error in updating Database');
                 break;
               }
             ?>
               <script type="text/javascript">
-                window.location = "pos.php";
+                window.location = "User1.php";
               </script>
           </div>
 

@@ -36,7 +36,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Sales and Inventory System</title>
+  <title>Flipside AI Cebu Inventory System</title>
   <link rel="icon" href="https://www.freeiconspng.com/uploads/sales-icon-7.png">
 
   <!-- Custom fonts for this template-->
@@ -70,7 +70,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Sales and Inventory System</div>
+        <div class="sidebar-brand-text mx-3">Flipside Inventory System</div>
       </a>
 
           <!-- Topbar Navbar -->

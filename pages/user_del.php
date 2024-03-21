@@ -21,29 +21,17 @@ if ($Aa=='User'){
              <?php   }
                          
            
-}   
+}
+	if (!isset($_GET['do']) || $_GET['do'] != 1) {
+						
+    	switch ($_GET['type']) {
+    		case 'User':
+    			$query = 'DELETE FROM User WHERE USER_ID = ' . $_GET['id'];
+    			$result = mysqli_query($db, $query) or die(mysqli_error($db));				
             ?>
-          <!-- Page Content -->
-          <div class="col-lg-12">
+    			<script type="text/javascript">alert("User Successfully Deleted.");window.location = "User1.php";</script>					
             <?php
-              $fname = $_POST['firstname'];
-              $lname = $_POST['lastname'];
-              $pn = $_POST['phonenumber'];
-        
-              switch($_GET['action']){
-                case 'add':     
-                    $query = "INSERT INTO customer
-                    (CUST_ID, FIRST_NAME, LAST_NAME, PHONE_NUMBER)
-                    VALUES (Null,'{$fname}','{$lname}','{$pn}')";
-                    mysqli_query($db,$query)or die ('Error in updating Database');
-                break;
-              }
-            ?>
-              <script type="text/javascript">
-                window.location = "customer.php";
-              </script>
-          </div>
-
-<?php
-include'../includes/footer.php';
+    			//break;
+            }
+	}
 ?>

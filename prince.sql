@@ -51,21 +51,21 @@ INSERT INTO `category` (`CATEGORY_ID`, `CNAME`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customer`
+-- Table structure for table `User`
 --
 
-CREATE TABLE `customer` (
-  `CUST_ID` int(11) NOT NULL,
+CREATE TABLE `User` (
+  `USER_ID` int(11) NOT NULL,
   `FIRST_NAME` varchar(50) DEFAULT NULL,
   `LAST_NAME` varchar(50) DEFAULT NULL,
   `PHONE_NUMBER` varchar(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `customer`
+-- Dumping data for table `User`
 --
 
-INSERT INTO `customer` (`CUST_ID`, `FIRST_NAME`, `LAST_NAME`, `PHONE_NUMBER`) VALUES
+INSERT INTO `User` (`USER_ID`, `FIRST_NAME`, `LAST_NAME`, `PHONE_NUMBER`) VALUES
 (9, 'Hailee', 'Steinfield', '09394566543'),
 (11, 'A Walk in Customer', NULL, NULL),
 (14, 'Chuchay', 'Jusay', '09781633451'),
@@ -115,8 +115,9 @@ CREATE TABLE `job` (
 --
 
 INSERT INTO `job` (`JOB_ID`, `JOB_TITLE`) VALUES
-(1, 'Manager'),
-(2, 'Cashier');
+(1, 'IT'),
+(2, 'HR'),
+(3, 'Intern');
 
 -- --------------------------------------------------------
 
@@ -278,7 +279,7 @@ INSERT INTO `supplier` (`SUPPLIER_ID`, `COMPANY_NAME`, `LOCATION_ID`, `PHONE_NUM
 
 CREATE TABLE `transaction` (
   `TRANS_ID` int(50) NOT NULL,
-  `CUST_ID` int(11) DEFAULT NULL,
+  `USER_ID` int(11) DEFAULT NULL,
   `NUMOFITEMS` varchar(250) NOT NULL,
   `SUBTOTAL` varchar(50) NOT NULL,
   `LESSVAT` varchar(50) NOT NULL,
@@ -294,7 +295,7 @@ CREATE TABLE `transaction` (
 -- Dumping data for table `transaction`
 --
 
-INSERT INTO `transaction` (`TRANS_ID`, `CUST_ID`, `NUMOFITEMS`, `SUBTOTAL`, `LESSVAT`, `NETVAT`, `ADDVAT`, `GRANDTOTAL`, `CASH`, `DATE`, `TRANS_D_ID`) VALUES
+INSERT INTO `transaction` (`TRANS_ID`, `USER_ID`, `NUMOFITEMS`, `SUBTOTAL`, `LESSVAT`, `NETVAT`, `ADDVAT`, `GRANDTOTAL`, `CASH`, `DATE`, `TRANS_D_ID`) VALUES
 (3, 16, '3', '456,982.00', '48,962.36', '408,019.64', '48,962.36', '456,982.00', '500000', '2019-03-18', '0318160336'),
 (4, 11, '2', '1,967.00', '210.75', '1,756.25', '210.75', '1,967.00', '2000', '2019-03-18', '0318160622'),
 (5, 14, '1', '550.00', '58.93', '491.07', '58.93', '550.00', '550', '2019-03-18', '0318170309'),
@@ -364,7 +365,7 @@ INSERT INTO `type` (`TYPE_ID`, `TYPE`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Table structure for table `users account`
 --
 
 CREATE TABLE `users` (
@@ -376,7 +377,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `users`
+-- Dumping data for table `users account`
 --
 
 INSERT INTO `users` (`ID`, `EMPLOYEE_ID`, `USERNAME`, `PASSWORD`, `TYPE_ID`) VALUES
@@ -395,10 +396,10 @@ ALTER TABLE `category`
   ADD PRIMARY KEY (`CATEGORY_ID`);
 
 --
--- Indexes for table `customer`
+-- Indexes for table `User`
 --
-ALTER TABLE `customer`
-  ADD PRIMARY KEY (`CUST_ID`);
+ALTER TABLE `User`
+  ADD PRIMARY KEY (`USER_ID`);
 
 --
 -- Indexes for table `employee`
@@ -450,7 +451,7 @@ ALTER TABLE `supplier`
 ALTER TABLE `transaction`
   ADD PRIMARY KEY (`TRANS_ID`),
   ADD KEY `TRANS_DETAIL_ID` (`TRANS_D_ID`),
-  ADD KEY `CUST_ID` (`CUST_ID`);
+  ADD KEY `USER_ID` (`USER_ID`);
 
 --
 -- Indexes for table `transaction_details`
@@ -466,7 +467,7 @@ ALTER TABLE `type`
   ADD PRIMARY KEY (`TYPE_ID`);
 
 --
--- Indexes for table `users`
+-- Indexes for table `users account`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`ID`),
@@ -484,10 +485,10 @@ ALTER TABLE `category`
   MODIFY `CATEGORY_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `customer`
+-- AUTO_INCREMENT for table `User`
 --
-ALTER TABLE `customer`
-  MODIFY `CUST_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+ALTER TABLE `User`
+  MODIFY `USER_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `employee`
@@ -526,7 +527,7 @@ ALTER TABLE `transaction_details`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT for table `users account`
 --
 ALTER TABLE `users`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
@@ -565,11 +566,11 @@ ALTER TABLE `supplier`
 -- Constraints for table `transaction`
 --
 ALTER TABLE `transaction`
-  ADD CONSTRAINT `transaction_ibfk_3` FOREIGN KEY (`CUST_ID`) REFERENCES `customer` (`CUST_ID`),
+  ADD CONSTRAINT `transaction_ibfk_3` FOREIGN KEY (`USER_ID`) REFERENCES `User` (`USER_ID`),
   ADD CONSTRAINT `transaction_ibfk_4` FOREIGN KEY (`TRANS_D_ID`) REFERENCES `transaction_details` (`TRANS_D_ID`);
 
 --
--- Constraints for table `users`
+-- Constraints for table `users account`
 --
 ALTER TABLE `users`
   ADD CONSTRAINT `users_ibfk_3` FOREIGN KEY (`TYPE_ID`) REFERENCES `type` (`TYPE_ID`),

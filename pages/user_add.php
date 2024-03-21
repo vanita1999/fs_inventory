@@ -26,9 +26,9 @@ if ($Aa=='User'){
             
             <center><div class="card shadow mb-4 col-xs-12 col-md-8 border-bottom-primary">
             <div class="card-header py-3">
-              <h4 class="m-2 font-weight-bold text-primary">Add Customer</h4>
+              <h4 class="m-2 font-weight-bold text-primary">Add User</h4>
             </div>
-            <a href="customer.php" type="button" class="btn btn-primary bg-gradient-primary">Back</a>
+            <a href="User1.php" type="button" class="btn btn-primary bg-gradient-primary">Back</a>
             <div class="card-body">
                         <div class="table-responsive">
                         <form role="form" method="post" action="cust_transac.php?action=add">

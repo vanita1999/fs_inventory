@@ -21,7 +21,7 @@ include'../includes/sidebar.php';
 }
  $query = 'SELECT *, FIRST_NAME, LAST_NAME, PHONE_NUMBER, EMPLOYEE, ROLE
               FROM transaction T
-              JOIN customer C ON T.`CUST_ID`=C.`CUST_ID`
+              JOIN User C ON T.`User_ID`=C.`User_ID`
               JOIN transaction_details tt ON tt.`TRANS_D_ID`=T.`TRANS_D_ID`
               WHERE TRANS_ID ='.$_GET['id'];
         $result = mysqli_query($db, $query) or die (mysqli_error($db));

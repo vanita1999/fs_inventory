@@ -36,8 +36,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Sales and Inventory System</title>
-  <link rel="icon" href="https://www.freeiconspng.com/uploads/sales-icon-7.png">
+  <title>Flipside AI Cebu Inventory System</title>
+  <link rel="icon" href="../img/Flipside.png">
 
   <!-- Custom fonts for this template-->
   <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -63,7 +63,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Sales and Inventory System</div>
+        <div class="sidebar-brand-text mx-3">Flipside Inventory System</div>
       </a>
 
       <!-- Divider -->
@@ -84,9 +84,9 @@
       </div>
       <!-- Tables Buttons -->
       <li class="nav-item">
-        <a class="nav-link" href="customer.php">
+        <a class="nav-link" href="User1.php">
           <i class="fas fa-fw fa-user"></i>
-          <span>Customer</span></a>
+          <span>User</span></a>
       </li>
 
       <li class="nav-item">
@@ -120,7 +120,7 @@
       </li>
       
       <li class="nav-item">
-        <a class="nav-link" href="user.php">
+        <a class="nav-link" href="UserA.php">
           <i class="fas fa-fw fa-users"></i>
           <span>Accounts</span></a>
       </li>

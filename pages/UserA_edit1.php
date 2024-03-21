@@ -22,5 +22,5 @@ include('../includes/connection.php');
 ?>
 				<script type="text/javascript">
 	                alert("You've updated your account successfully.");
-	                window.location = "user.php";
+	                window.location = "UserA.php";
             	</script>
