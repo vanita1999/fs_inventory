@@ -9,4 +9,5 @@ user
 user: test
 pass: test
 
-Making User interface with functions and also Database.
+Continuing on making the users interface and functions.
+Creating front-end using bootstrap.

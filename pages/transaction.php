@@ -32,8 +32,8 @@ include'../includes/sidebar.php';
                    <tr>
                      <th width="19%">Transaction Number</th>
                      <th>User</th>
-                     <th width="13%"># of Items</th>
-                     <th width="11%">Action</th>
+                     <th width="13%">Number of Items</th>
+                     <th width="9%">Action</th>
                    </tr>
                </thead>
           <tbody>

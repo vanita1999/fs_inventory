@@ -17,7 +17,7 @@
 
 //DROPDOWN FOR CUSTOMER
 $sql = "SELECT CUST_ID, FIRST_NAME, LAST_NAME
-        FROM customer
+        FROM User
         order by FIRST_NAME asc";
 $res = mysqli_query($db, $sql) or die ("Error SQL: $sql");
 
