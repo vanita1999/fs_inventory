@@ -3,7 +3,7 @@ include'../includes/connection.php';
 session_start();
 
               $date = $_POST['date'];
-              $customer = $_POST['customer'];
+              $customer = $_POST['User'];
               $subtotal = $_POST['subtotal'];
               $lessvat = $_POST['lessvat'];
               $netvat = $_POST['netvat'];
